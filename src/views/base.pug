@@ -1,7 +1,10 @@
 doctype html
 html(lang="ko")
     head
-        title #{pageTitle} | #{siteName}
+        meta(name="description" content="Nomade Coder Challenge for cloning the music player")
+        link(rel="shortcut icon" href="/images/logo.png")
+        title #{pageTitle} | THEBOX
+        
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
         link(rel="stylesheet", href="/static/css/styles.css")
     body
@@ -9,5 +12,5 @@ html(lang="ko")
         main
             block content
         include partials/footer
-    script(src="/static/js/main.js") 
+    script(src="/client/js/main.js")
     block scripts
