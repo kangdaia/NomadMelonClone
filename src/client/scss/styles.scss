@@ -17,8 +17,144 @@ a {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: $bg;
-  color: white;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    background-color: $bg;
+    color: white;
+    font: 100% Pretendard;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    box-sizing: border-box;
+}
+
+footer {
+    margin: 20px;
+}
+
+#navi-bar {
+    height: 80px;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    .logo-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        grid-column: 1;
+        img {
+            flex-shrink: 0;
+            object-fit: fill;
+            width: 40px;
+            height: auto;
+            padding: min(20px, 40px);
+        }
+        .logo-title {
+            font: 100% Pretendard;
+            font-size: 28px;
+            font-weight: 900;
+        }
+    }
+    .user-login {
+        grid-column: 12;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#topchart {
+    margin-top: 60px;
+    box-sizing: border-box;
+    padding: 0 40px;
+    font: 100% Pretendard;
+    .topchart-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        svg {
+            padding: 0 10px;
+            transition: all .2s ease-in-out;
+        }
+    }
+    .topchart-content {
+        background-color: $bg2;
+        width: 100%;
+        margin-top: 13px;
+        box-shadow: 0 0 0 100vmax $bg2;
+        clip-path: inset(0 -100vmax);
+        box-sizing: border-box;
+        .chart-desc, .chart-info {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: repeat(12, 1fr);
+            grid-template-columns: repeat(12, 1fr);
+            -ms-grid-rows: auto;
+            grid-template-rows: auto;
+            padding: 20px 0;
+        }
+        .divider {
+            margin-bottom: 15px;
+        }
+    }
+}
+.album {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+.song-title {
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+}
+.song-playtime, .album-name {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+}
+.chart-icon {
+    display: flex;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+.chart-icon:hover{
+    transform: scale(1.1);
+}
+.song-rank {
+    padding: 0 2px;
+    width: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.song-title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: $darkpt;
+}
+.subtitle {
+    font-size: 22px;
+    font-weight: 700;
+}
+.song-text {
+    font-size:20px;
+    font-weight: 500;
 }

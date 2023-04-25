@@ -1,0 +1,26 @@
+mixin chart-info(info, src)
+    - info = info || {"rank": 2, "title": "title", "artist":"artist", "album": "album", "playtime": 0}
+    .chart-info
+        .rank.song-rank #{info.rank}
+        .album.song-title
+            include ../icons/empty-album
+            .song-title-wrap
+                .song-title.song-text #{info.title}
+                .song-artist #{info.artist}
+        .album-name #{info.album}
+        .song-playtime #{info.playtime}
+        .chart-icon
+            include ../icons/play-button
+        .chart-icon
+            include ../icons/heart-empty
+        .chart-icon
+            include ../icons/document-icon 
+        .chart-icon 
+            include ../icons/share-icon 
+
+
+mixin album-list(type, info, src)
+    case type 
+        when "chart"
+            +chart-info(info, src)
+

@@ -1,4 +1,23 @@
 extends base
-
+include partials/album-list
 block content
-    div
+    #navi-bar
+        .logo-wrap
+            img(src="https://i.ibb.co/gJ4CKY2/thebox-logo.png", alt="thebox_logo", border="0")
+            .logo-title THEBOX
+        .user-login 
+            include icons/user-icon
+    #topchart
+        .topchart-title 
+            .subtitle TOP CHART
+            include icons/play
+        .topchart-content
+            .chart-desc 
+                 .song-rank #
+                 .song-title 제목
+                 .album-name 앨범
+                 .song-playtime 재생 횟수
+            .divider
+            .chart-rank1 
+            +album-list("chart")
+            
